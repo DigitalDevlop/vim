@@ -10,7 +10,7 @@ const Click2 = () => {
   useEffect(() => {
     const timeout1 = setTimeout(() => {
       setCurrentImage(image2);
-    }, 500); // Switch to image2 after 3 seconds
+    }, 700); // Switch to image2 after 3 seconds
 
     const timeout2 = setTimeout(() => {
       navigate('/image3');
@@ -23,8 +23,8 @@ const Click2 = () => {
   }, [navigate]); 
 
   return (
-    <div>
-      <img className='widget-container' src={currentImage} alt="Image 2" />
+    <div className="slider-container">
+      <img className={`widget-container ${currentImage === image2 ? 'glass-shatter' : ''}`} src={currentImage} alt="Image 2" />
     </div>
   );
 };
