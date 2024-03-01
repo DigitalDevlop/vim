@@ -10,7 +10,7 @@ const Click2 = () => {
   useEffect(() => {
     const timeout1 = setTimeout(() => {
       setCurrentImage(image2);
-    }, 500); // Switch to image2 after 3 seconds
+    }, 400); // Switch to image2 after 3 seconds
 
     const timeout2 = setTimeout(() => {
       navigate('/image3');
