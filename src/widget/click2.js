@@ -14,7 +14,7 @@ const Click2 = () => {
 
     const timeout2 = setTimeout(() => {
       navigate('/image3');
-    }, 1000); // Navigate to /image3 after 6 seconds
+    }, 2000); // Navigate to /image3 after 6 seconds
 
     return () => {
       clearTimeout(timeout1);
