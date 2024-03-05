@@ -38,7 +38,7 @@ const Click4 = () => {
         <button 
           style={{ 
             fontSize: '16px',
-            bottom: '260px',
+            bottom: '430px',
             left:'85px',
             position: 'absolute', 
             padding: '10px 20px', 
