@@ -20,7 +20,7 @@ const App = () => {
           <Route path="/image2" element={<Click2 />} />
           <Route path="/image3" element={<Click3 />} />
           <Route path="/image4" element={<Click4 />} />
-          <Route path="/image5" element={<Click5 />} />
+          <Route path="/image8" element={<Click5 />} />
         </Routes>
       </Router>
     </>

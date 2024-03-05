@@ -1,15 +1,17 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import image5 from './../images/05.png';
+import image1 from './../images/08.png';
+import './widget.css'
 
 const Click5 = () => {
   return (
     <div>
     
-      <Link to="/image5">
-        <img className='widget-container' src={image5} alt="Image 5" />
+      <Link to="/image8">
+        <img className='widget-container' src={image1} alt="Image 5" />
       </Link>
+      <button className="vim-button">Click කරන්න</button>
     </div>
   );
 };
