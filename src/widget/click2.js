@@ -14,6 +14,7 @@ const Click2 = () => {
 
     const timeout2 = setTimeout(() => {
       navigate('/image3');
+      sendClickEvent();
     }, 2000); // Navigate to /image3 after 6 seconds
 
     return () => {
@@ -21,6 +22,25 @@ const Click2 = () => {
       clearTimeout(timeout2);
     };
   }, [navigate]); 
+
+  const sendClickEvent = async () => {
+    try {
+      const response = await fetch('https://widget-cms.adstudio.cloud/api/vim/clicks/2', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      if (response.ok) {
+        console.log('Click event sent successfully.');
+      } else {
+        console.error('Failed to send click event.');
+      }
+    } catch (error) {
+      console.error('Error sending click event:', error);
+    }
+  };
+
 
   return (
     <div className="slider-container">

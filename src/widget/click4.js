@@ -22,33 +22,40 @@ const Click4 = () => {
     return () => clearTimeout(timeout);
   }, [currentImageIndex]);
 
-  const handleButtonClick = () => {
-    // Redirect to WhatsApp link
-    window.location.href = 'https://wa.me/message/ZL55EG3J4EUKA1';
+  const handleButtonClick = async () => {
+    try {
+      const response = await fetch('https://widget-cms.adstudio.cloud/api/vim/clicks/3', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        // Omit the body property to send an empty request body
+      });
+      if (response.ok) {
+        console.log('API call successful.');
+        // Redirect to WhatsApp link after API call
+        window.location.href = 'https://wa.me/message/ZL55EG3J4EUKA1';
+      } else {
+        console.error('Failed to make API call.');
+      }
+    } catch (error) {
+      console.error('Error making API call:', error);
+    }
   };
+
+
 
   return (
     <div>
-      <img 
+      <img
         src={images[currentImageIndex]} 
         alt={`Image ${currentImageIndex + 4}`} 
       />
       {/* Render the button only for the last image */}
       {currentImageIndex === images.length - 1 && (
-        <button 
-          style={{ 
-            fontSize: '16px',
-            bottom: '430px',
-            left:'85px',
-            position: 'absolute', 
-            padding: '10px 20px', 
-            backgroundColor: 'green',
-            color: 'white', 
-            border: 'none', 
-            borderRadius: '30px', 
-            cursor: 'pointer', 
-        
-          }} 
+        <button className='button'
+         
+           
           onClick={handleButtonClick}
         >
           Click කරන්න
