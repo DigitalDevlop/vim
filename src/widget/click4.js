@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import image1 from './../images/04.png';
 import image3 from './../images/05.png';
 import image4 from './../images/06.png';
@@ -43,19 +42,29 @@ const Click4 = () => {
     }
   };
 
-
-
   return (
-    <div>
+    <div style={{ position: 'relative',width:300,height:250  }}>
       <img
         src={images[currentImageIndex]} 
         alt={`Image ${currentImageIndex + 4}`} 
+        style={{ width: '100%' }}
       />
       {/* Render the button only for the last image */}
       {currentImageIndex === images.length - 1 && (
-        <button className='button'
-         
-           
+        <button 
+          style={{
+            position: 'absolute',
+            left: '50%',
+            bottom: '10%',
+            transform: 'translateX(-50%)',
+            fontSize: 16,
+            backgroundColor: "green",
+            color: "white",
+            border: "none",
+            borderRadius: 30,
+            padding: "5px 20px", 
+            cursor: "pointer"
+          }}
           onClick={handleButtonClick}
         >
           Click කරන්න

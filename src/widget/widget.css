@@ -1,94 +1,12 @@
-body, html {
-  margin: 0;
-  padding: 0;
-}
 
 .widget-container {
-  position: fixed;
+  position: relative; 
   width: 300px;
-  height: 250px;
+    height: 250px;
   overflow: hidden;
   cursor: pointer;
-  background-color: greenyellow;
-  transition: transform 0.6s ease-in-out;
 }
 
-.glass-shatter {
-  animation: glass-shatter 0.6s ease-in-out forwards; /* Apply the glass shatter animation */
-}
 
-.widget-image {
-  position: relative;
-  width: 50px;
-  height: 50px;
-}
 
-#button-container {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: none;
-  cursor: pointer;
-}
 
-.image-transition {
-  transition: opacity 0.5s ease; /* Define the transition effect */
-}
-
-.image-transition:hover {
-  opacity: 0.7; /* Change the opacity on hover if needed */
-}
-
-.button {
-  font-size: 16px;
-  bottom: 430px;
-  left: 85px;
-  position: absolute;
-  padding: 10px 20px;
-  background-color: green;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-/* Media Query for smaller screens */
-@media only screen and (min-width: 1000px ) and (max-width: 768px) {
-  .widget-container {
-    position: fixed;
-    width: 300px;
-    height: 250px;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  .widget-image {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    /* display: none; */
-  }
-  
-  #button-container {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-    cursor: pointer;
-  }
-    
-  .button {
-    font-size: 16px;
-    /* bottom: 30px; */
-    /* left: 5px; */
-    position: absolute;
-    padding: 10px 20px;
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-  }
-
-}
