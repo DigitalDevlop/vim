@@ -31,10 +31,12 @@ const Click4 = () => {
       });
       if (response.ok) {
         console.log('API call successful.');
-        const link = document.createElement('a');
-        link.href = 'https://wa.me/message/ZL55EG3J4EUKA1';
-        link.target = '_blank';
-        link.click();
+      // Attempt to open in a new tab using window.open
+      const newTab = window.open('https://wa.me/message/ZL55EG3J4EUKA1', '_blank');
+      if (!newTab || newTab.closed || typeof newTab.closed === 'undefined') {
+        // Fallback: if window.open fails, open in current tab
+        window.location.href = 'https://wa.me/message/ZL55EG3J4EUKA1';
+      }
       } else {
         console.error('Failed to make API call.');
       }
@@ -66,7 +68,7 @@ const Click4 = () => {
             cursor: "pointer"
           }}
           onClick={handleButtonClick}
-          onTouchStart={handleButtonClick}
+         
         >
           Click කරන්න
         </button>
