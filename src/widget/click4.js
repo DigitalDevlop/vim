@@ -28,7 +28,6 @@ const Click4 = () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        // Omit the body property to send an empty request body
       });
       if (response.ok) {
         console.log('API call successful.');
@@ -49,7 +48,6 @@ const Click4 = () => {
         alt={`Image ${currentImageIndex + 4}`} 
         style={{ width: '100%' }}
       />
-      {/* Render the button only for the last image */}
       {currentImageIndex === images.length - 1 && (
         <button 
           style={{
@@ -66,6 +64,7 @@ const Click4 = () => {
             cursor: "pointer"
           }}
           onClick={handleButtonClick}
+          onTouchStart={handleButtonClick}
         >
           Click කරන්න
         </button>
