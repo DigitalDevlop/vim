@@ -31,8 +31,10 @@ const Click4 = () => {
       });
       if (response.ok) {
         console.log('API call successful.');
-        // Redirect to WhatsApp link after API call
-        window.open('https://wa.me/message/ZL55EG3J4EUKA1', '_blank');
+        const link = document.createElement('a');
+        link.href = 'https://wa.me/message/ZL55EG3J4EUKA1';
+        link.target = '_blank';
+        link.click();
       } else {
         console.error('Failed to make API call.');
       }
